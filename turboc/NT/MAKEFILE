@@ -1,0 +1,13 @@
+all: nt.exe
+.c.obj:		
+		tcc -c $<
+
+nt.obj:		nt.c
+chara2.obj:	chara2.c
+patarn.obj:	patarn.c
+
+nt.exe:		nt.obj chara2.obj patarn.obj keyin.obj
+		tcc nt.obj chara2.obj patarn.obj keyin.obj
+
+
+	
